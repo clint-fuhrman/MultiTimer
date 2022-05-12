@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/timerListFragment">
+
+    <fragment
+        android:id="@+id/timerListFragment"
+        android:name="io.clfm.multitimer.ui.TimerListFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/timer_list_fragment">
+        <action
+            android:id="@+id/action_timerListFragment_to_addOrEditTimerFragment"
+            app:destination="@id/addOrEditTimerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addOrEditTimerFragment"
+        android:name="io.clfm.multitimer.ui.AddOrEditTimerFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_add_or_edit_timer">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="timer_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addOrEditTimerFragment_to_timerListFragment"
+            app:destination="@id/timerListFragment"
+            app:popUpTo="@id/timerListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

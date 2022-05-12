@@ -1,0 +1,36 @@
+<resources>
+
+    <string name="app_name">MultiTimer</string>
+
+    <string name="add">Add</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+
+    <string name="no_timers_message">Tap \"+\" to create a timer!</string>
+
+    <string name="delete_button_description">Timer deletion button</string>
+    <string name="reset_button_description">Timer reset button</string>
+    <string name="play_button_description">Timer play button</string>
+    <string name="pause_button_description">Timer pause button</string>
+    <string name="drag_handle_description">Timer repositioning handle</string>
+
+    <string name="add_timer_fragment_title">Add Timer</string>
+    <string name="edit_timer_fragment_title">Edit Timer</string>
+    <string name="timer_name_hint">Timer Name<font color='#d12119'>*</font></string>
+    <string name="save_action">Save</string>
+    <string name="cancel_action">Cancel</string>
+
+    <string name="delete_question">Are you sure you want to delete \"%s\"?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    <string name="notification_title">MultiTimer</string>
+    <string name="timer_finished_message">Timer finished!</string>
+    <string name="timer_finished_message_with_name">Timer \"%s\" finished!</string>
+    <string name="timer_finished_channel_id" translatable="false">timer_finished_channel</string>
+    <string name="timer_finished_channel_name" translatable="true">Timer Finished</string>
+    <string name="hours_abbreviation">H</string>
+    <string name="minutes_abbreviation">M</string>
+    <string name="seconds_abbreviation">S</string>
+
+</resources>

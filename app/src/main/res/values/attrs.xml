@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="notStartedTimerColor" format="reference" />
+    <attr name="runningTimerColor" format="reference" />
+    <attr name="pausedTimerColor" format="reference" />
+    <attr name="finishedTimerColor" format="reference" />
+</resources>

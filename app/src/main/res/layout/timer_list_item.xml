@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/timerCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="?attr/notStartedTimerColor"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:descendantFocusability="blocksDescendants">
+
+        <ImageButton
+            android:id="@+id/delete_button"
+            style="?attr/imageButtonStyle"
+            android:layout_marginStart="@dimen/margin"
+            android:contentDescription="@string/delete_button_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_delete_button"
+            app:tint="?attr/colorError" />
+
+        <TextView
+            android:id="@+id/timer_name"
+            style="@style/Widget.MultiTimer.ListItemTextView"
+            android:layout_marginStart="@dimen/margin_between_elements"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:textSize="18sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/reset_button"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/delete_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Timer Name" />
+
+        <TextView
+            android:id="@+id/timer_time_remaining"
+            style="@style/Widget.MultiTimer.ListItemTextView"
+            android:layout_marginStart="@dimen/margin_between_elements"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="@dimen/margin_between_elements"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/delete_button"
+            app:layout_constraintTop_toBottomOf="@+id/timer_name"
+            tools:text="01:30:00" />
+
+        <ImageButton
+            android:id="@+id/reset_button"
+            style="?attr/imageButtonStyle"
+            android:layout_marginEnd="@dimen/margin_between_elements"
+            android:contentDescription="@string/reset_button_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/play_or_pause_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_reset" />
+
+        <ImageButton
+            android:id="@+id/play_or_pause_button"
+            style="?attr/imageButtonStyle"
+            android:layout_marginEnd="@dimen/margin_between_elements"
+            android:contentDescription="@string/play_button_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/drag_handle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_play" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicatorColor="?attr/colorPrimary"
+            app:indicatorSize="58dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/drag_handle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:trackColor="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/drag_handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin"
+            android:contentDescription="@string/drag_handle_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_reorder" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
